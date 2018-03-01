@@ -1,0 +1,11 @@
+http://rzander.azurewebsites.net/script-to-install-or-update-drivers-directly-from-microsoft-catalog/
+
+Register Windows Update as a Driver Soruce
+Scan required drivers against windows Update
+Download drivers from WIndows update
+install drivers from windows update
+remove windows update driver source
+
+Get Hardware ID for Cameras
+Get-CimInstance Win32_PnPEntity | Where-Object { $_.Name -like "*cam*" } | ft DeviceID
+Get-CimInstance Win32_PnPEntity | Where-Object { $_.DeviceID -like "*USB\VID_*" } | ft Name,DeviceID
